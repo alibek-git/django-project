@@ -2,11 +2,12 @@
 <head> 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>{% block title %} {% endblock title %}</title>
 </head>
 <body>
-	<h1>{{flatpage.title}}</h1>
+	<a href="/about">About</a>
+	<a href="/contacts">Contacts</a>
 	<hr>
-	<h3>{{flatpage.content}}</h3>
-</body>
+	{% block content %}
+	{% endblock content %}
 </html>
